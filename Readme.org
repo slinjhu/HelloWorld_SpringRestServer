@@ -1,0 +1,6 @@
+#+TITLE: Demo of restful server using Spring Boot
+
+* How to run
+- Build using gradle: ~gradle build~
+- Run the jar file: ~java -jar build/libs/HelloWorld_SpringRestServer.jar~
+- The server is up on localhost at port number 8080: ~http://localhost:8080~
