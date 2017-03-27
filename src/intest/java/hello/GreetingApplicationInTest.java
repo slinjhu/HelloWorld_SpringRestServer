@@ -40,7 +40,7 @@ public class GreetingApplicationInTest {
   @Test
   @SneakyThrows
   public void testLegalPost() {
-    mockMvc.perform(post(String.format("/hello?name=%s", me)))
+    mockMvc.perform(post("/hello").param("name", me))
         .andExpect(status().isOk())
         .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
         .andExpect(jsonPath("$.name").value(greetingMe.getName()))
